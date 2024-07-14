@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  app:
+    container_name: TZ-3205-team-backend
+    env_file: .env
+    restart: always
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "${PORT_APP}:${PORT_APP}"
